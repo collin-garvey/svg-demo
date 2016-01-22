@@ -19,16 +19,7 @@ var rename = require('gulp-rename');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 
-var config = {
-    paths: {
-        svg: './svg/',
-        svg_source: './svg/source/*.svg'
-    },
-    svg_output: 'symbols.svg'
-};
-
 gulp.task('svg', function(){
-
     gulp.src('./svg/source/*.svg')
         .pipe(svgmin({
             plugins: [
@@ -47,40 +38,42 @@ gulp.task('svg', function(){
         .pipe(gulp.dest('./svg/'));
 });
 
-/*
-SVGO / SVGMin "Plugins" - All boolean values
-cleanupAttrs
-removeDoctype
-removeXMLProcInst
-removeComments
-removeMetadata
-removeTitle
-removeDesc
-removeUselessDefs
-removeEmptyAttrs
-removeHiddenElems
-removeEmptyText
-removeEmptyContainers
-removeViewBox
-cleanUpEnableBackground
-convertStyleToAttrs
-convertColors
-convertPathData
-removeUnknownsAndDefaults
-removeNonInheritableGroupAttrs
-removeUselessStrokeAndFill
-removeUnusedNS
-cleanupIDs
-cleanupNumericValues
-moveElemsAttrsToGroup
-moveGroupAttrsToElems
-collapseGroups
-removeRasterImages
-mergePaths
-sortAttrs
-transformsWithOnePath
-removeDimensions
-removeAttrs
-addClassesToSVGElement
-removeStyleElement
-*/
+/**
+ * SVGO / SVGMin "Plugins" - All boolean values
+ * @link https://github.com/svg/svgo
+ *
+ cleanupAttrs
+ removeDoctype
+ removeXMLProcInst
+ removeComments
+ removeMetadata
+ removeTitle
+ removeDesc
+ removeUselessDefs
+ removeEmptyAttrs
+ removeHiddenElems
+ removeEmptyText
+ removeEmptyContainers
+ removeViewBox
+ cleanUpEnableBackground
+ convertStyleToAttrs
+ convertColors
+ convertPathData
+ removeUnknownsAndDefaults
+ removeNonInheritableGroupAttrs
+ removeUselessStrokeAndFill
+ removeUnusedNS
+ cleanupIDs
+ cleanupNumericValues
+ moveElemsAttrsToGroup
+ moveGroupAttrsToElems
+ collapseGroups
+ removeRasterImages
+ mergePaths
+ sortAttrs
+ transformsWithOnePath
+ removeDimensions
+ removeAttrs
+ addClassesToSVGElement
+ removeStyleElement
+ */
