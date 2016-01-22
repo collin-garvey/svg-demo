@@ -19,79 +19,38 @@
     </section>
 
     <section class="main-content">
-      <p> 
-            <h1>
+      <h1>
 <a id="svgs" class="anchor" href="#svgs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SVGs</h1>
-             
-                <h2>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements:</h2>
-                <ul>
-                    <li>Gulp task(s) to compile individual SVGs into a single SVG manifest file</li>
-                    <li>SVG manifest file must be able to be referenced externally</li>
-                    <li>
-                        SVGs must be able to be stylable, while retaining their original detail
-                        <ul>
-                            <li>Interaction effects (hover, click, etc.)</li>
-                            <li>Animation</li>
-                        </ul>
-                    </li>
-                </ul>
-             
-             
-                <h2>
-<a id="externally-referenced-svg" class="anchor" href="#externally-referenced-svg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Externally Referenced SVG</h2>  </p>
 
-<pre><code>            &lt;svg class="icon icon--lightbulb"&gt;
-                &lt;use xlink:href="svg/symbols.svg#lightbulb_illustrator"&gt;&lt;/use&gt;
-            &lt;/svg&gt;
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
 
-            &lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;svg class="icon icon--lightbulb"&gt;
-&amp;lt;use xlink:href="svg/symbols.svg#lightbulb_illustrator"&gt;&amp;lt;/use&gt;
+<ul>
+<li>Gulp task(s) to compile individual SVGs into a single SVG manifest file</li>
+<li>SVG manifest file must be able to be referenced externally</li>
+<li>SVGs must be able to be stylable, while retaining their original detail
+
+<ul>
+<li>Interaction effects (hover, click, etc.)</li>
+<li>Animation</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="externally-referenced-svg" class="anchor" href="#externally-referenced-svg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Externally Referenced SVG</h2>
+
+<pre><code>&lt;svg class="icon icon--lightbulb"&gt;
+    &lt;use xlink:href="svg/symbols.svg#lightbulb_illustrator"&gt;&lt;/use&gt;
+&lt;/svg&gt;
 </code></pre>
 
-<p>&lt;/svg&gt;
-</p>
+<h3>
+<a id="tools-used" class="anchor" href="#tools-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tools Used</h3>
 
-<pre><code>            &lt;svg class="icon icon--network"&gt;
-                &lt;use xlink:href="svg/symbols.svg#network_illustrator"&gt;&lt;/use&gt;
-            &lt;/svg&gt;
-
-            &lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;svg class="icon icon--network"&gt;
-&amp;lt;use xlink:href="svg/symbols.svg#network_illustrator"&gt;&amp;lt;/use&gt;
-</code></pre>
-
-<p>&lt;/svg&gt;
-
-            </p>
-
-<pre><code>        &lt;section&gt;
-            &lt;h3&gt;Tools Used&lt;/h3&gt;
-            &lt;ul&gt;
-                &lt;li&gt;
-                    &lt;a href="https://github.com/w0rm/gulp-svgstore"&gt;SVG Store&lt;/a&gt;&lt;br&gt; Combines multiple svg files into one using
-                    &lt;code&gt;&amp;lt;symbol&amp;gt;&lt;/code&gt; elements
-                &lt;/li&gt;
-
-                &lt;li&gt;
-                    &lt;a href="https://github.com/sindresorhus/grunt-svgmin"&gt;SVGmin&lt;/a&gt;&lt;br&gt; Gulp wrapper/adapter for SVGO
-                &lt;/li&gt;
-
-                &lt;li&gt;
-                    &lt;a href="https://github.com/svg/svg"&gt;SVGO&lt;/a&gt;&lt;br&gt; *Actually* minifies the SVG files
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-            &lt;h3&gt;More about SVG&lt;/h3&gt;
-
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href="https://css-tricks.com/svg-use-with-external-reference-take-2/"&gt;CSS Tricks: SVG `use` with External Reference, Take 2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute"&gt;MDN SVG Attribute Reference&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/section&gt;
-    &lt;/article&gt;
-</code></pre>
+<ul>
+<li><a href="https://github.com/w0rm/gulp-svgstore">SVG Store</a></li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/collin-garvey/svg-demo">Svg-demo</a> is maintained by <a href="https://github.com/collin-garvey">collin-garvey</a>.</span>
