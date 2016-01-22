@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SVG "Sprite" demo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="css/prism.css">
+        <link rel="stylesheet" href="css/demo.css">
+    </head>
+    <body>
+        <article>
+            <h1>SVGs</h1>
+            <section>
+                <h2>Requirements:</h2>
+                <ul>
+                    <li>Gulp task(s) to compile individual SVGs into a single SVG manifest file</li>
+                    <li>SVG manifest file must be able to be referenced externally</li>
+                    <li>
+                        SVGs must be able to be stylable, while retaining their original detail
+                        <ul>
+                            <li>Interaction effects (hover, click, etc.)</li>
+                            <li>Animation</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Externally Referenced SVG</h2>
+
+                <svg class="icon icon--lightbulb">
+                    <use xlink:href="svg/symbols.svg#lightbulb_illustrator"></use>
+                </svg>
+
+                <pre><code class="language-markup">&lt;svg class="icon icon--lightbulb">
+    &lt;use xlink:href="svg/symbols.svg#lightbulb_illustrator">&lt;/use>
+&lt;/svg>
+</code></pre>
+
+                <svg class="icon icon--network">
+                    <use xlink:href="svg/symbols.svg#network_illustrator"></use>
+                </svg>
+
+                <pre><code class="language-markup">&lt;svg class="icon icon--network">
+    &lt;use xlink:href="svg/symbols.svg#network_illustrator">&lt;/use>
+&lt;/svg>
+</code></pre>
+            </section>
+
+            <section>
+                <h3>Tools Used</h3>
+                <ul>
+                    <li>
+                        <a href="https://github.com/w0rm/gulp-svgstore">SVG Store</a><br> Combines multiple svg files into one using
+                        <code>&lt;symbol&gt;</code> elements
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/sindresorhus/grunt-svgmin">SVGmin</a><br> Gulp wrapper/adapter for SVGO
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/svg/svg">SVGO</a><br> *Actually* minifies the SVG files
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>More about SVG</h3>
+
+                <ul>
+                    <li><a href="https://css-tricks.com/svg-use-with-external-reference-take-2/">CSS Tricks: SVG `use` with External Reference, Take 2</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">MDN SVG Attribute Reference</a></li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- DEMO JS -->
+        <script src="js/prism.js"></script>
+
+        <!-- SVG 4 Everybody -->
+        <script src="js/svg4everybody.js"></script>
+        <script>
+            svg4everybody({
+                /**
+                 * polyfill: true tells svg4everybody to use its polyfill functionality.
+                 * What this does is replace the <use> element we have in our html with the actual content of each symbol in the external symbols file.
+                 * Without this, we wouldn't be able to style individual elements within the sybmol.
+                 */
+                polyfill: true
+            });
+        </script>
+    </body>
+</html>
