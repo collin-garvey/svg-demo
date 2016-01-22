@@ -29,10 +29,10 @@ var config = {
 
 gulp.task('svg', function(){
 
-    gulp.src(config.paths.svg_source)
+    gulp.src('./svg/source/*.svg')
         .pipe(svgmin({
             plugins: [
-                { convertStyleToAttrs: false }
+                // Add svg tweaks from list of settings below
             ],
 
             // js2svg is simply used to (sort of) prettify the symbols.svg for this demo
@@ -43,8 +43,8 @@ gulp.task('svg', function(){
         .pipe(svgstore({
             inlineSvg: true
         }))
-        .pipe(rename(config.svg_output))
-        .pipe(gulp.dest(config.paths.svg));
+        .pipe(rename('symbols.svg'))
+        .pipe(gulp.dest('./svg/'));
 });
 
 /*
